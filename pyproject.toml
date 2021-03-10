@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "apispec_oneof"
+version = "0.1.0"
+description = "POC for OneOf field swagger generation by apispec lib"
+authors = ["PatriSampaio <patrick.brandao@geru.com.br>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pyramid = "1.10.8"
+cornice = "^5.1.0"
+apispec = "^4.3.0"
+marshmallow = "^3.10.0"
+pyramid-apispec = "^0.4"
+apispec-oneofschema = "^3.0.0"
+gunicorn = "^20.0.4"
+marshmallow-oneofschema = "^2.1.0"
+singledispatch = "^3.6.1"
+
+[tool.poetry.plugins."paste.app_factory"]
+main = "apispec_oneof:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
